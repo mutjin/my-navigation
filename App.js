@@ -12,13 +12,22 @@ function HomeScreen(){
 ;
 };
 
+function DetailScreen(){
+    return(
+        <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+            <Text>Detail Screen</Text>
+        </View>
+    )
+}
+
 const Stack=createNativeStackNavigator();
 
 function App(){
     return(
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator initialRouteName='Detail'>
                 <Stack.Screen name="Home" component={HomeScreen}/>
+                <Stack.Screen name="Detail" component={DetailScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
