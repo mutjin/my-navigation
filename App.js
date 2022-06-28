@@ -25,8 +25,8 @@ const Stack=createNativeStackNavigator();
 function App(){
     return(
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='Detail'>
-                <Stack.Screen name="Home" component={HomeScreen}/>
+            <Stack.Navigator initialRouteName='Home'>
+                <Stack.Screen name="Home" component={HomeScreen} options={{title:'OverView'}}/>
                 <Stack.Screen name="Detail" component={DetailScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
